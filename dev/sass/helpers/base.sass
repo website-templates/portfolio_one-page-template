@@ -1,0 +1,123 @@
+// Common layout elements
+html, body
+	width: 100%
+	height: 100%
+	color: #2c3e50
+	font-family: $font-sans
+	line-height: 1.2
+
+body
+	background: #fff url('../images/bg-pattern.jpg') repeat
+
+.container
+	position: relative
+	max-width: 1200px
+	margin: 0 auto
+	+clearfix
+
+.common-section
+	padding-top: 100px
+	+gs()
+	@media screen and (max-width: 800px)
+		padding-top: 50px
+
+	&__header
+		padding-bottom: 50px
+		text-align: center
+		+gs-column(12)
+		@media screen and (max-width: 800px)
+			padding-bottom: 30px
+
+.grid-container
+	+gs()
+
+
+// Typography
+*::selection
+	color: $color-light
+	background-color: $color-darken
+
+*::-moz-selection
+	color: $color-light
+	background-color: $color-darken
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+h1
+	color: #ecf0f1
+	font-size: 120px
+	font-family: $font-serif
+	@media screen and (max-width: 900px)
+		font-size: 100px
+	@media screen and (max-width: 600px)
+		font-size: 80px
+
+h2
+	font-family: $font-serif
+	font-size: 40px
+	@media screen and (max-width: 900px)
+		font-size: 35px
+	@media screen and (max-width: 600px)
+		font-size: 30px
+
+h3
+	font-size: 30px
+	@media screen and (max-width: 900px)
+		font-size: 25px
+	@media screen and (max-width: 600px)
+		font-size: 20px
+
+h4
+	font-size: 20px
+	@media screen and (max-width: 900px)
+		font-size: 18px
+
+h5
+	font-size: 18px
+	@media screen and (max-width: 600px)
+		font-size: 16px
+
+p
+	font-size: 18px
+	@media screen and (max-width: 600px)
+		font-size: 16px
+
+li p
+	font-family: $font-serif
+	font-style: italic
+
+a
+	color: #2c3e50
+	font-family: $font-sans
+	font-size: 18px
+	text-decoration: none
+	outline-style: none
+	border-bottom: 1px dashed #2c3e50
+	&:hover
+		border-bottom: none
+
+.icon
+	&:before
+		font-family: "ip"
+		font-style: normal
+		font-weight: normal
+
+	&_menu
+		&:before
+			content: "\e801"
+		&.is-closed:before
+			content: "\e809"
+
+	&_spoiler
+		&.is-opened:before
+			content: "\e803"
+		&.is-closed:before
+			content: "\e802"
+
+	@function unicode($str)
+		@return unquote("\"") + $str + unquote("\"")
+	$icons: research \e80b, strategy \e807, improve \e80f, plan \e80c, recover \e80a, support \e80e, develop \e808, deploy \e80d, deliver \e810, gotop \e817, gonext \e818, fb \e811, twi \e812, gplus \e813, vk \e814, in \e815, rss \e816, mail \e800, location \e806, ql \e804, qr \e805, link \e819
+	@each $icon in $icons
+		&_#{nth($icon, 1)}
+			&:before
+				content: unicode(nth($icon, 2))

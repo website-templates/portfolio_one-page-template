@@ -1,0 +1,50 @@
+=testbg($red: 255, $green: 0, $blue: 0, $alpha: 0.3)
+	background-color: rgba($red, $green, $blue, $alpha)
+
+=testout($width: 1px, $line-type: solid, $color: #0074d9)
+	outline: $width $line-type $color
+
+=hidentext
+	text-indent: 100%
+	white-space: nowrap
+	overflow: hidden
+
+=selection($text-color: #333333, $bg-color: #efefef)
+	*::selection
+		color: $text-color
+		background: $bg-color
+	*::-moz-selection
+		color: $text-color
+		background: $bg-color
+
+=clearfix
+	&:before,
+	&:after
+		display: block
+		content: ''
+		clear: both
+		height: 0
+
+//This mixin was created by css-tricks.com with some fixes from Paul d'Aoust
+
+=stripes-gradient($colors, $direction: "to right", $fallback-color: white)
+	$stripe-width: 100% / length($colors)
+	$auto: if(type-of(nth($colors, 1)) == list, false, true)
+	$gradient: ()
+	@for $i from 1 through length($colors)
+		$item: nth($colors, $i)
+		$dump: ()
+		@if $auto == true
+			$dump: $item $stripe-width * ($i - 1), $item $stripe-width * $i
+		@else
+			@if $i > 1
+				$previous-item: nth($colors, $i - 1)
+				$dump: append($dump, nth($item, 1) nth($previous-item, 2))
+			$dump: append($dump, $item)
+		$gradient: join($gradient, $dump, comma)
+	background: $fallback-color
+	background: -webkit-linear-gradient($direction, $gradient)
+	background: -moz-linear-gradient($direction, $gradient)
+	background: -ms-linear-gradient($direction, $gradient)
+	background: -o-linear-gradient($direction, $gradient)
+	background: linear-gradient($direction, $gradient)

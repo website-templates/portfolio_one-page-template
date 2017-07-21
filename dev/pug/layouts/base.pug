@@ -1,0 +1,33 @@
+//- Mixins
+include ../_vendor-list
+
+//- Helpers: meta information, head and body assets src
+include ../_helpers-list
+
+//- Common used mixin-blocks
+include ../_blocks-list
+
+//- This block will be filled with page variables
+block variables
+
+doctype html
+html(lang= pageLang ? pageLang : config.site.lang)
+	head
+		//- Meta information
+		+head-meta()
+
+		//- Head external resources
+		+head-src()
+
+		//- Include page specific content
+		block head-content
+
+	body
+		//- Page preloader js
+		+progress()
+
+		//- Include page specific content
+		block body-content
+
+		//- Body assets
+		+body-src()

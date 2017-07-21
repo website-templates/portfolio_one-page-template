@@ -1,0 +1,27 @@
+mixin head-meta()
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible", content="IE=edge")
+	meta(name="viewport", content="width=device-width, initial-scale=1")
+
+	//- Site meta information
+	title= pageTitle ? pageTitle + config.site.titleDelim + config.site.title : config.site.title
+	meta(name="description", content= pageDescription ? pageDescription : config.site.description)
+	meta(name="keywords", content= pageKeywords ? pageKeywords : config.siteKeywords)
+
+	//- Opengraph
+	if config.modules.openGraph
+		meta(property="og:type", content="website")
+		meta(property="og:title", content= pageTitle ? pageTitle + config.site.titleDelim + config.site.title : config.site.title)
+		meta(property="og:description", content= pageDescription ? pageDescription : config.site.description)
+		meta(property="og:image", content= config.site.url + "/static/images/card.jpg")
+		meta(property="og:url", content= pageUrl ? pageUrl : config.site.url)
+
+	//- TwitterCard
+	if config.modules.twitterCard
+		meta(name="twitter:card", content="summary")
+		meta(name="twitter:title", content= pageTitle ? pageTitle + config.site.titleDelim + config.site.title : config.site.title)
+		meta(name="twitter:description", content= pageDescription ? pageDescription : config.site.description)
+		meta(name="twitter:image:src", content= config.site.url + "/static/images/card.jpg")
+		meta(name="twitter:creator", content= config.links.twitterCardCreator)
+		meta(name="twitter:site", content= config.links.twitterCardAccount)
+		meta(name="twitter:url", content= pageUrl ? pageUrl : config.site.url)

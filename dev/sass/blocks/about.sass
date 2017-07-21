@@ -1,0 +1,38 @@
+// About section  - container for "about me" card
+.about-section
+	position: relative
+	margin-top: -200px
+
+// Card with content, half-positioned over hero image section
+.about-card
+	box-shadow: 2px 2px 4px -2px $color-dark
+	+gs-column(9)
+	float: right
+	@media screen and (max-width: 800px)
+		+gs-column(12)
+		float: none
+
+	&__header
+		padding: 20px
+		background-color: $color-accent
+		& h2, & h4
+			color: $color-light
+
+	&__info
+		padding: 20px
+		background-color: $color-light
+		& p
+			font-weight: lighter
+		& blockquote p
+			margin: 20px 0 20px 20px
+			font-family: $font-serif
+			font-style: italic
+
+		& &-status
+			margin-top: 20px
+			padding-top: 10px
+			font-weight: normal
+			border-top: 1px dashed $color-darken
+			& span
+				font-weight: bold
+				text-transform: uppercase

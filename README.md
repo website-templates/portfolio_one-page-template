@@ -4,6 +4,9 @@ Flat and responsive website template, designed and coded by [Maxim Orlov](https:
 
 Demo: [http://website-templates.github.io/personal-portfolio_one-page-template](http://website-templates.github.io/personal-portfolio_one-page-template/)
 
+![Mockup demo](screenshots/pic.jpg)
+Product mockup created with [http://magicmockups.com/](http://magicmockups.com/)
+
 ## Contents
 * [Folder structure](#folder-and-file-structure)
 * [Requirements](#requirements)
@@ -74,17 +77,17 @@ Demo: [http://website-templates.github.io/personal-portfolio_one-page-template](
 │   └── data/                                  * configs and data for templates
 │
 └── build/                                     * built source
-    ├── index.html
-    ├── page.html
-    |
-    └── static/                                * static assets
-        ├── css/                               * minified styles
-        |
-        ├── images/                            * minified images
-        │
-        ├── js/                                * minified assembled js
-        |
-        └── fonts/                             * @font-face-ready webfonts
+	├── index.html
+	├── page.html
+	|
+	└── static/                                * static assets
+		├── css/                               * minified styles
+		|
+		├── images/                            * minified images
+		│
+		├── js/                                * minified assembled js
+		|
+		└── fonts/                             * @font-face-ready webfonts
 
 ```
 

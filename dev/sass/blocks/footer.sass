@@ -1,0 +1,72 @@
+// Main footer with copyrights and gotop link
+.main-footer
+	position: relative
+	z-index: 100
+	width: 100%
+	background-color: $color-accent
+	color: $color-light
+	box-shadow: 0 -2px 2px -1px $color-dark
+
+	&:before
+		content: ""
+		position: absolute
+		top: -30px
+		left: 50%
+		margin-left: -40px
+		border-bottom: 40px solid $color-accent
+		border-left: 40px solid transparent
+		border-right: 40px solid transparent
+	& a
+		color: $color-light
+		border-color: $color-light
+		transition: color .5s
+
+		&:hover
+			color: $color-dark
+
+	&__author
+		margin-left: 10px
+		padding-top: 10px
+		float: left
+		line-height: 40px
+		@media screen and (max-width: 600px)
+			padding-top: 20px
+			line-height: 1
+
+	&__designer
+		margin-right: 10px
+		padding-top: 10px
+		float: right
+		line-height: 40px
+		@media screen and (max-width: 600px)
+			padding-top: 0
+
+	&__author, &__designer
+		font-weight: lighter
+		& span, & a
+			font-weight: bold
+		@media screen and (max-width: 600px)
+			float: none
+			text-align: center
+
+	&__gotop
+		position: absolute
+		top: -20px
+		left: 50%
+		z-index: 200
+		display: block
+		width: 36px
+		height: 36px
+		margin-left: -18px
+		font-size: 0
+		border: none
+		overflow: hidden
+
+		&:before
+			display: block
+			font-size: 60px
+			line-height: 40px
+			color: $color-light
+			transition: color .5s
+		&:hover:before
+			color: $color-dark

@@ -1,0 +1,35 @@
+.progressjs
+	&-inner
+		width: 0
+	&-progress
+		z-index: 9999999
+
+// Custom theme
+.progressjs-theme-custom
+	background-color: $color-light
+	-webkit-transition: all 0.2s ease-out
+	-moz-transition: all 0.2s ease-out
+	-o-transition: all 0.2s ease-out
+	transition: all 0.2s ease-out
+	& .progressjs-inner
+		height: 100%
+		-webkit-transition: all 0.3s ease-out
+		-moz-transition: all 0.3s ease-out
+		-o-transition: all 0.3s ease-out
+		transition: all 0.3s ease-out
+	&.progressjs-end
+		opacity: 0 !important
+	& .progressjs-percent
+		position: absolute
+		top: 50%
+		left: 50%
+		display: block
+		width: 200px
+		height: 120px
+		margin-left: -100px
+		margin-top: -60px
+		text-align: center
+		color: $color-accent
+		font-size: 120px
+		line-height: 120px
+		font-family: $font-sans

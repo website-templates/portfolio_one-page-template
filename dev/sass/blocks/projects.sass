@@ -1,0 +1,97 @@
+// Full width projects list wrap
+.projects-wrap
+	position: relative
+	width: 100%
+	clear: both
+	overflow: hidden
+	&:before, &:after
+		content: ""
+		position: absolute
+		left: 0
+		z-index: 10
+		display: block
+		width: 100%
+		height: 0
+		clear: both
+	&:before
+		top: 0
+		box-shadow: 0 0 2px 1px $color-dark
+	&:after
+		bottom: 0
+		box-shadow: 0 0 2px 1px $color-dark
+
+// Projects grid
+.projects
+	+gs-column(1,1,0,0,auto,0,0)
+
+	// Projects item
+	&__item
+		+gs-column(1,4,0,0,auto,0,0)
+
+		position: relative
+		height: 0
+		padding-bottom: 18.75%
+		overflow: hidden
+
+		@media screen and (max-width: 1200px)
+			+gs-column(1,2,0,0,auto,0,0)
+			padding-bottom: 37.5%
+
+		@media screen and (max-width: 480px)
+			+gs-column(1,1,0,0,auto,0,0)
+			padding-bottom: 75%
+
+		& img
+			position: absolute
+			top: 0
+			right: 0
+			left: 0
+			display: block
+			width: 100%
+			margin: 0
+
+		// Caption that appears on hover
+		& figcaption
+			position: absolute
+			top: 0
+			left: 0
+			display: block
+			width: 100%
+			height: 100%
+			text-align: center
+			white-space: nowrap
+			background-color: $color-light
+			background-color: transparentize($color-light, 0.1)
+			visibility: hidden
+			opacity: 0
+			transition: opacity .5s
+
+			&:after
+				content: ""
+				display: inline-block
+				width: 0
+				height: 100%
+				vertical-align: middle
+
+			& a
+				display: inline-block
+				width: 90%
+				font-size: 25px
+				color: $color-accent
+				vertical-align: middle
+				white-space: normal
+				border-bottom: none
+
+				@media screen and (max-width: 800px)
+					font-size: 20px
+
+				&:before
+					margin-right: 5px
+					font-size: 20px
+
+					@media screen and (max-width: 800px)
+						font-size: 18px
+
+		&:hover figcaption
+			visibility: visible
+			opacity: 1

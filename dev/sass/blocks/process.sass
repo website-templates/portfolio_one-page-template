@@ -1,0 +1,178 @@
+// Process slider on pure css.
+// Yeah, with JS it will be more simple and elegant but I wanted to CSS stuff for this case
+// Warning: contains shame and IE workarounds
+
+// Workflow items list
+.process
+	position: relative
+	list-style-type: none
+	+gs-column(12)
+	height: 360px
+
+	// Magick starts here: hiding active tooltip and its arrow
+	&:hover
+		& .process__step-icon.is-active
+			border-color: darken($color-light, 5%)
+			&:before
+				text-shadow: -1px -1px 0 $color-dark, 0 -1px 0 $color-dark, 1px -1px 0 $color-dark, 1px 0 0 $color-dark, 1px 1px 0 $color-dark, 0 1px 0 $color-dark, -1px 1px 0 $color-dark, -1px 0 0 $color-dark
+		& .process__step-info
+			visibility: hidden
+			&:before, &:after
+				visibility: hidden
+
+// Main item - round with icon inside
+.process__step
+	position: absolute
+	top: 0
+	display: block
+	width: 25%
+	height: 100%
+	// Shame and dirty hack, but it prevents IE8-9 flickering issue with on text layer
+	// Just remove it and enjoy tooltip blinking on hover
+	background-color: rgba(255, 255, 255, 0)
+	background-image: url('../images/transparent.gif')
+	background-repeat: repeat
+	&_research
+		left: 0%
+		z-index: 40
+	&_develop
+		left: 37.5%
+		margin-left: -12.5%
+		z-index: 30
+	&_deploy
+		left: 62.5%
+		margin-left: -12.5%
+		z-index: 20
+	&_deliver
+		left: 87.5%
+		margin-left: -12.5%
+		z-index: 10
+
+	// Show sibling when you hover over the icon and highlight icon
+	&:hover
+		& > .process__step-icon,
+		& > .process__step-icon.is-active
+			border-color: $color-accent
+			&:before
+				text-shadow: -1px -1px 0 $color-accent, 0 -1px 0 $color-accent, 1px -1px 0 $color-accent, 1px 0 0 $color-accent, 1px 1px 0 $color-accent, 0 1px 0 $color-accent, -1px 1px 0 $color-accent, -1px 0 0 $color-accent
+
+		& + .process__step-info
+			visibility: visible
+
+			&_research:before,
+			&_research:after
+				left: 12.5%
+				visibility: visible
+			&_develop:before,
+			&_develop:after
+				left: 37.5%
+				visibility: visible
+			&_deploy:before,
+			&_deploy:after
+				left: 62.5%
+				visibility: visible
+			&_deliver:before,
+			&_deliver:after
+				left: 87.5%
+				visibility: visible
+
+// Icon inside rounded item
+.process__step-icon
+	position: absolute
+	top: 0
+	left: 50%
+	display: block
+	width: 180px
+	height: 180px
+	margin-left: -90px
+	text-align: center
+	background-color: $color-light
+	border: 1px solid darken($color-light, 5%)
+	border-radius: 50%
+	box-shadow: 3px 4px 8px -4px $color-dark
+	transition: all .5s
+	@media screen and (max-width: 800px)
+		width: 160px
+		height: 160px
+		margin-left: -80px
+	@media screen and (max-width: 600px)
+		width: 140px
+		height: 140px
+		margin-left: -70px
+	@media screen and (max-width: 480px)
+		width: 120px
+		height: 120px
+		margin-left: -60px
+
+	&:before
+		font-size: 80px
+		line-height: 180px
+		color: darken($color-light, 5%)
+		text-shadow: -1px -1px 0 $color-dark, 0 -1px 0 $color-dark, 1px -1px 0 $color-dark, 1px 0 0 $color-dark, 1px 1px 0 $color-dark, 0 1px 0 $color-dark, -1px 1px 0 $color-dark, -1px 0 0 $color-dark
+		cursor: default
+		transition: all .5s
+		@media screen and (max-width: 800px)
+			font-size: 70px
+			line-height: 160px
+		@media screen and (max-width: 600px)
+			font-size: 70px
+			line-height: 140px
+		@media screen and (max-width: 480px)
+			font-size: 60px
+			line-height: 120px
+
+	&.is-active
+		border-color: $color-accent
+		&:before
+			text-shadow: -1px -1px 0 $color-accent, 0 -1px 0 $color-accent, 1px -1px 0 $color-accent, 1px 0 0 $color-accent, 1px 1px 0 $color-accent, 0 1px 0 $color-accent, -1px 1px 0 $color-accent, -1px 0 0 $color-accent
+
+// Tooltip with some information and nice arrow
+.process__step-info
+	position: absolute
+	top: 180px
+	left: 0
+	z-index: -1
+	display: block
+	width: 100%
+	margin: 40px 0 50px
+	padding: 10px
+	background-color: $color-light
+	border-top: 10px solid $color-accent
+	box-shadow: 2px 2px 4px -2px $color-dark
+	@media screen and (max-width: 800px)
+		top: 160px
+	@media screen and (max-width: 600px)
+		top: 140px
+	@media screen and (max-width: 480px)
+		top: 120px
+
+	&_research,
+	&_develop,
+	&_deploy,
+	&_deliver
+		visibility: hidden
+	&.is-active
+		visibility: visible
+	&:before
+		content: ""
+		position: absolute
+		top: -40px
+		left: 12.5%
+		margin-left: -40px
+		border-bottom: 40px solid $color-accent
+		border-left: 40px solid transparent
+		border-right: 40px solid transparent
+	&:after
+		content: ""
+		position: absolute
+		top: -25px
+		left: 12.5%
+		margin-left: -27px
+		border-bottom: 27px solid $color-light
+		border-left: 27px solid transparent
+		border-right: 27px solid transparent
+
+	& h3
+		margin-bottom: 10px
+		& span
+			color: $color-darken

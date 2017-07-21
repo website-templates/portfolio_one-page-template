@@ -1,0 +1,90 @@
+// Services list
+.services
+	list-style-type: none
+	+gs-column(6)
+	@media screen and (max-width: 800px)
+		+gs-column(12)
+
+	&__item
+		margin-bottom: 50px
+		@media screen and (max-width: 800px)
+			margin-bottom: 30px
+
+		& h4
+			margin-left: 80px
+			margin-bottom: 10px
+			text-transform: uppercase
+			font-weight: bold
+
+		& p
+			margin-left: 80px
+
+		// Service icon with state change on hover
+		&:before
+			margin-top: 30px
+			float: left
+			color: $color-darken
+			font-size: 60px
+			transition: color .5s
+
+		&:hover:before
+			color: $color-accent
+
+// Advantages chapter with border, let's make it fluid!
+.advantages
+	text-align: center
+	// Side borders specified here...
+	border-left: 10px solid $color-accent
+	border-right: 10px solid $color-accent
+	+gs-column(12)
+	margin-top: 50px
+	@media screen and (max-width: 800px)
+		margin-top: 30px
+
+	& h2
+		position: relative
+		margin-top: -15px
+		// ...and here comes "broken" top border around our title
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 15px
+			display: block
+			width: 30%
+			height: 10px
+			background-color: $color-accent
+			@media screen and (max-width: 900px)
+				width: 25%
+			@media screen and (max-width: 600px)
+				width: 15%
+			@media screen and (max-width: 480px)
+				width: 10%
+		&:before
+			left: 0
+		&:after
+			right: 0
+
+	& blockquote
+		padding: 40px 0
+		// Finally bottom border, fluid and pretty simple, isn't it?
+		border-bottom: 10px solid $color-accent
+		@media screen and (max-width: 600px)
+			padding: 20px 0
+		& p, & cite
+			display: inline-block
+			width: 80%
+			margin: 0 auto
+		& p
+			margin-bottom: 20px
+			font-weight: lighter
+			font-size: 25px
+			@media screen and (max-width: 900px)
+				font-size: 20px
+			@media screen and (max-width: 600px)
+				font-size: 18px
+		& cite
+			font-size: 30px
+			@media screen and (max-width: 900px)
+				font-size: 25px
+			@media screen and (max-width: 600px)
+				font-size: 20px

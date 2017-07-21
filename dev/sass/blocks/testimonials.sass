@@ -1,0 +1,62 @@
+// Testimonials list
+.testimonials
+	list-style-type: none
+	+gs-column(6)
+	@media screen and (max-width: 800px)
+		+gs-column(12)
+
+	// Testimonials item
+	&__item
+		min-height: 180px
+		margin-bottom: 40px
+		padding: 40px 20px
+		background-color: $color-light
+		box-shadow: 2px 2px 4px -2px $color-dark
+		@media screen and (max-width: 800px)
+			margin-bottom: 20px
+
+		& img
+			display: block
+			width: 100px
+			height: 100px
+			float: left
+			border-radius: 50%
+			opacity: .6
+			transition: opacity .5s
+			@media screen and (max-width: 1200px) and (min-width: 800px)
+				display: none
+			@media screen and (max-width: 480px)
+				display: none
+
+		&:hover img
+			opacity: 1
+
+		& blockquote
+			margin-left: 140px
+			@media screen and (max-width: 1200px) and (min-width: 800px)
+				margin-left: 0
+			@media screen and (max-width: 480px)
+				margin-left: 0
+
+			& p
+				position: relative
+				margin-left: 25px
+				&:before
+					position: absolute
+					top: -5px
+					left: -25px
+					font-size: 20px
+					color: $color-accent
+
+			& cite
+				display: block
+				margin-top: 20px
+				font-size: 20px
+				text-transform: uppercase
+				@media screen and (max-width: 900px)
+					font-size: 18px
+				& span.name
+					color: $color-accent
+				& span.role
+					color: $color-darken
+					white-space: nowrap

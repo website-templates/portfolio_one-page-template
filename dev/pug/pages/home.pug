@@ -1,0 +1,37 @@
+extends ../layouts/base
+
+block variables
+	- pageLang = "en"
+	- pageTitle = "Home"
+	- pageDescription = "Page-specific description"
+	- pageKeywords = "Page-specific keywords"
+	- pageUrl = ""
+
+
+block body-content
+	// Header
+	+header
+
+	// Home section
+	+home
+
+	// About section
+	+about
+
+	// Services section
+	+services
+
+	// Process section
+	+process
+
+	// Projects section
+	+projects
+
+	// Testimonials section
+	+testimonials
+
+	// Contacts section
+	+contacts
+
+	// Footer
+	+footer
