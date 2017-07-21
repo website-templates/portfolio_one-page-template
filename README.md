@@ -1,4 +1,4 @@
-# Personal portfolio one page template
+# Personal portfolio one page template - ARCHIVED
 
 Flat and responsive website template, designed and coded by [Maxim Orlov](https://github.com/orlovmax). 
 
