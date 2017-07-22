@@ -28,22 +28,32 @@
 	padding: 20px 60px 20px 20px
 	background-color: $color-light
 	overflow: hidden
+	white-space: nowrap
 
 	&__logo
-		float: left
+		display: inline-block
 		color: $color-accent
-		font-size: 100px
-		line-height: 80px
+		font-size: 80px
+		line-height: 60px
+		letter-spacing: -5px
 		font-family: $font-sans
 		font-weight: bold
 		text-align: center
-		text-transform: uppercase
 		border: none
+		vertical-align: top
+
 		@media screen and (max-width: 800px)
 			display: none
 
+	&__group
+		display: inline-block
+		padding-left: 20px
+		white-space: normal
+		vertical-align: top
+
+
 	&__additional
-		margin: 0 0 20px 110px
+		margin-bottom: 20px
 		@media screen and (max-width: 800px)
 			margin-left: 0
 
@@ -53,7 +63,6 @@
 			line-height: 1.5
 
 	&__vcard
-		margin-left: 110px
 		@media screen and (max-width: 800px)
 			margin-left: 0
 
