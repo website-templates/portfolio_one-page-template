@@ -1,8 +1,8 @@
-# Personal portfolio one page template - ARCHIVED
+# Portfolio one page template - ARCHIVED
 
 Flat and responsive website template, designed and coded by [Maxim Orlov](https://github.com/orlovmax). 
 
-Demo: [http://website-templates.github.io/personal-portfolio_one-page-template](http://website-templates.github.io/personal-portfolio_one-page-template/)
+Demo: [http://website-templates.github.io/portfolio_one-page-template](http://website-templates.github.io/portfolio_one-page-template/)
 
 ![Mockup demo](screenshots/pic.jpg)
 Product mockup created with [http://magicmockups.com/](http://magicmockups.com/)
@@ -166,4 +166,4 @@ Gulp: `gulp server`
 This project uses BrowserSync as static server with enabled and configured live reload option.
 
 ## License
-[MIT](https://github.com/website-templates/personal-portfolio_one-page-template/blob/master/LICENSE.md)
+[MIT](https://github.com/website-templates/portfolio_one-page-template/blob/master/LICENSE.md)
