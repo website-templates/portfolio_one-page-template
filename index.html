@@ -20,9 +20,12 @@
       	text-align: center;
       }
       .background {
-      	position: absolute;
-      	min-width: 100%;
-      	min-height: 100%;
+      	position: fixed;
+      	top: 0;
+      	right: 0;
+      	bottom: 0;
+      	left: 0;
+      	z-index:1;
       }
       .background_gradient {
       	background: #ffa500;
@@ -48,10 +51,12 @@
       	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
       }
       .overlay {
-      	position: relative;
-      	width: 100%;
-      	height: 100%;
-      	min-height: 100%;
+      	position: fixed;
+      	top: 0;
+      	right: 0;
+      	bottom: 0;
+      	left: 0;
+      	z-index:10;
       	overflow: auto;
       }
       .overlay_dark {
@@ -65,10 +70,12 @@
       	box-shadow: inset 0 3px 3px -2px #0f0f0f, inset 0 -3px 3px -2px #0f0f0f;
       }
       .project {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
       	display: block;
       	width: 100%;
       	max-width: 1200px;
-      	min-height: 100%;
       	margin: 0 auto;
       	text-align: center;
       }
