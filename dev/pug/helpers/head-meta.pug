@@ -6,7 +6,7 @@ mixin head-meta()
 	//- Site meta information
 	title= pageTitle ? pageTitle + config.site.titleDelim + config.site.title : config.site.title
 	meta(name="description", content= pageDescription ? pageDescription : config.site.description)
-	meta(name="keywords", content= pageKeywords ? pageKeywords : config.siteKeywords)
+	meta(name="keywords", content= pageKeywords ? pageKeywords : config.site.keywords)
 
 	//- Opengraph
 	if config.modules.openGraph
