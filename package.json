@@ -1,5 +1,5 @@
 {
-  "name": "synt-general-template",
+  "name": "se-general-template",
   "description": "General project template based on Grunt/Gulp task runners",
   "devDependencies": {
     "autoprefixer": "^6.5.0",
