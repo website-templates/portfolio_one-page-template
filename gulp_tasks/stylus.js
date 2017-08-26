@@ -10,6 +10,7 @@ var gulp = require('gulp'),
 //Compile *.scss files
 gulp.task('stylus:main', function () {
 	return gulp.src(paths.dev.stylus + '/*.styl')
+		.pipe(plumber())
 		.pipe(stylus())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest(paths.build.css));
