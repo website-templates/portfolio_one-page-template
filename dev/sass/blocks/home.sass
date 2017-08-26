@@ -47,7 +47,14 @@
 
 		& h1
 			margin-bottom: 10px
+			font-size: 100px
 			text-shadow: 1px 1px 1px $color-dark
+
+			@media screen and (max-width: 1200px)
+				font-size: 75px
+
+			@media screen and (max-width: 800px)
+				font-size: 50px
 		& h2
 			color: $color-light
 			font-family: 'Open Sans Condensed'
