@@ -2,19 +2,14 @@ mixin header()
 	header.main-header
 		.first-nav
 			.container
-				+languages([{
-					lang: 'en',
-				    name: 'english',
-				    href: '#'
-				}, {
-					lang: 'fr',
-				    name: 'français',
-				    href: '#'
-				}, {
-					lang: 'de',
-				    name: 'deutsch',
-				    href: '#'
-				}])
+				nav.first-nav__links
+					ul
+						li
+							a.is-selected english
+						li
+							a(href="#") français
+						li
+							a(href="#") deutsch
 
 				a.first-nav__navcontrol.icon.icon_menu.js-navcontrol(href="#") Menu
 		.second-nav.js-nav

@@ -16,8 +16,8 @@
 	+gs()
 	box-shadow: 0 1px 2px -1px $color-dark
 
-	// Languages menu
-	&__languages
+	&__languages,
+	&__links
 		+gs-column(9)
 		@media screen and (max-width: 600px)
 			+gs-column(11)
@@ -98,7 +98,7 @@
 		text-align: center
 		background-color: $color-accent
 		border: none
-		@media screen and (max-width: 800px)
+		@media screen and (max-width: 960px)
 			display: none
 		&:after
 			content: ""
@@ -148,7 +148,6 @@
 		margin-left: 18px
 		@media screen and (max-width: 800px)
 			margin: 0 9px
-		@media screen and  (max-width:720px)
 			display: block
 			margin: auto
 			border-bottom: 1px dashed $color-darken
@@ -159,7 +158,6 @@
 			transition: color .5s
 			@media screen and (max-width: 800px)
 				font-size: 18px
-			@media screen and  (max-width:720px)
 				line-height: 2
 				border-bottom: none
 

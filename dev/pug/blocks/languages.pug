@@ -1,9 +1,0 @@
-mixin languages(items)
-	nav.first-nav__languages
-		ul
-			each item in items
-				li
-					if item.lang === pageLang
-						a.is-selected= item.name
-					else
-						a(href=item.href)= item.name

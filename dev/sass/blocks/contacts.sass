@@ -24,7 +24,7 @@
 // Contact infomation wrap that contain vcard info, social menu and additional info
 .contact-info
 	position: relative
-	height: 300px
+	min-height: 300px
 	padding: 20px 60px 20px 20px
 	background-color: $color-light
 	overflow: hidden
@@ -51,6 +51,9 @@
 		white-space: normal
 		vertical-align: top
 
+		@media screen and (max-width: 800px)
+			padding-left: 0
+
 
 	&__additional
 		margin-bottom: 20px
@@ -69,12 +72,24 @@
 		& h4
 			margin-bottom: 10px
 			font-weight: bold
+
 		& p
 			margin-bottom: 10px
 			&:before
-				display: inline-block
+				float: left
+				display: block
 				width: 25px
+				height: 25px
 				border: none
+				vertical-align: top
+
+		& a
+			display: inline-block
+			vertical-align: top
+
+		& span
+			display: inline-block
+
 
 	&__social
 		position: absolute
@@ -83,6 +98,7 @@
 		top: 0
 		right: 0
 		list-style-type: none
+		background-color: $color-darken
 
 		& li
 			display: block
