@@ -1,7 +1,0 @@
-{
-  "name": "se-general-template",
-  "description": "General project template based on Grunt/Gulp task runners",
-  "dependencies": {
-    "jquery": "1.11.1"
-  }
-}

@@ -1,6 +1,6 @@
 # Portfolio one page template - ARCHIVED
 
-Flat and responsive website template, designed and coded by [Maxim Orlov](https://github.com/orlovmax). 
+Flat and responsive website template, designed and coded by [Maxim Orlov](https://github.com/orlovmax).
 
 Demo: [http://website-templates.github.io/portfolio_one-page-template](http://website-templates.github.io/portfolio_one-page-template/)
 
@@ -8,37 +8,37 @@ Demo: [http://website-templates.github.io/portfolio_one-page-template](http://we
 Product mockup created with [http://magicmockups.com/](http://magicmockups.com/)
 
 ## Contents
-* [Folder structure](#folder-and-file-structure)
-* [Requirements](#requirements)
-	- [Editorconfig](#editorconfig)
-* [Site configuration](#site-configuration)
-* [Tasks](#tasks)
-	- [Start](#start)
-	- [Dev](#dev)
-	- [Build](#build)
-	- [Rebuild](#rebuild)
-	- [Server](#server)
-* [Live reload](#live-reload)
-* [License](#license)
+
+- [Folder and file structure](#folder-and-file-structure)
+- [Requirements:](#requirements)
+    - [Editorconfig](#editorconfig)
+- [How to start](#how-to-start)
+- [Site configuration](#site-configuration)
+- [Tasks](#tasks)
+    - [Cleanup](#cleanup)
+    - [Dev](#dev)
+    - [Build](#build)
+    - [Rebuild](#rebuild)
+    - [Server](#server)
+    - [Sprite](#sprite)
+- [Live reload](#live-reload)
+- [License](#license)
 
 ## Folder and file structure
+
 ```
 ./
 ├── .editorconfig
-├── bower.json
+├── gulpfile.js
+├── package.json
 ├── README.md
-├── automation.sh
 |
 ├── gulp_tasks/                                * gulp tasks
 |   ├── config/                                * gulp tasks config
 │   |   ├── paths.js
-│   |   ├── settings.js
 │   |   └── aliases.js
 │   |
 |   └── task.js
-│
-├── gulpfile.js
-├── package.json
 |
 ├── screenshots/                               * responsive test screenshots
 |
@@ -53,11 +53,11 @@ Product mockup created with [http://magicmockups.com/](http://magicmockups.com/)
 |   │   ├── layouts/                           * page layouts
 |   │   └── pages/                             * main pages templates
 |   │
-│   ├── js/                                    * compiled and source js
+│   ├── js/                                    * source js
 |   |   ├── vendor/                            * vendor scripts library
 |   |   ├── lib/                               * site scripts library
 |   │   ├── head.js                            * head scripts
-|   │   └── body.js                            * vendor scripts
+|   │   └── body.js                            * body scripts
 |   │
 |   ├── sass/                                  * sass preprocessor styles
 |   |   ├── blocks/                            * blocks library
@@ -77,59 +77,77 @@ Product mockup created with [http://magicmockups.com/](http://magicmockups.com/)
 │   └── data/                                  * configs and data for templates
 │
 └── build/                                     * built source
-	├── index.html
-	├── page.html
-	|
-	└── static/                                * static assets
-		├── css/                               * minified styles
-		|
-		├── images/                            * minified images
-		│
-		├── js/                                * minified assembled js
-		|
-		└── fonts/                             * @font-face-ready webfonts
+    ├── index.html
+    ├── page.html
+    |
+    └── static/                                * static assets
+        ├── css/                               * minified styles
+        |
+        ├── images/                            * minified images
+        │
+        ├── js/                                * minified assembled js
+        |
+        └── fonts/                             * @font-face-ready webfonts
 
 ```
 
-## Requirements:
+## Requirements
+
 - [Node.js](http://nodejs.org/)
-- Build sytem: [Gulp](http://gulpjs.com/)
-- Optionally: [Editorconfig](http://editorconfig.org/)
+- Build sytem: [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)
+- Optionally:
+  * [Editorconfig](http://editorconfig.org/)
 
 #### Editorconfig
-This project have .editorconfig file at the root that used by your code editor with editorconfig plugin. It describes codestyle like indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/)
+
+This project has an .editorconfig file at the root. It describes indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/)
+
+## How to start
+
+If you haven't used [Gulp](http://gulpjs.com/) before, be sure to check out the [Getting Started]([https://github.com/gulpjs/gulp/blob/master/docs/README.md](https://gulpjs.com/docs/en/getting-started/quick-start)) guide, also check these [recips](https://github.com/gulpjs/gulp/tree/master/docs/recipes#recipes)
+
+Before start you need to have installed _npm_ , as well as _gulp_ globally.
+
+**A few simple steps to start:**
+* Install dependencies from `package.json` by running: `npm install`.
+* Run tasks from the list below and start devevelopment!
+* Edit general settings in `dev/data/config.json` See [Site configuration](#site-configuration) section
 
 ## Site configuration
-This boilerplate use Pug templates with external data configs. 
+
+This boilerplate uses Pug templates with external data configs.
 Main settings can be found in `dev/data/config.json` file. And they're available for usage in templates with `config.key-name`
 
 ## Tasks
-Here comes groups of gulp tasks with some explanations
 
-#### Start 
-Install bower dependencies and place them to dev folders.
-Gulp: `gulp start`
+Here comes groups ofgulp tasks with some explanations
 
-* Install bower components
-* Copy bower components to dev folder
+#### Cleanup
+
+Remove placeholders from work directories.
+Gulp: `gulp cleanup`
+
 * Remove gitkeep files
 
 #### Dev
+
 Dev task with static server.
 Gulp: `gulp dev`
 
-* Concatenate javascripts
+* Bundle javascripts
 * Compile Sass stylesheets
 * Add vendor prefixes in css
 * Combine media queries in css files
 * Compile Pug templates
 * Sync helpers and other assets
+* Sync fonts
 * Sync images
-* Run BrowserSync static server with live reload using 
+* Run BrowserSync static server with live reload using
 * Watch for changes and run dev task
 
 
-#### Build 
+#### Build
+
 Build task.
 Gulp: `gulp build`
 
@@ -137,32 +155,38 @@ Gulp: `gulp build`
 * Minify javascript files
 * Minify stylesheets
 * Minify html
-* Run BrowserSync static server 
+* Run BrowserSync static server
 
 
-#### Rebuild 
+#### Rebuild
+
 Regenerate and build project by running all tasks.
 Gulp: `gulp rebuild`
 
-* Concatenate javascripts
+* Bundle javascripts
 * Compile Sass stylesheets
 * Add vendor prefixes in css
 * Combine media queries in css files
 * Compile Pug templates
 * Sync helpers and other assets
+* Sync fonts
 * Sync images
 * Minify images
 * Minify javascript files
 * Minify stylesheets
 * Minify html
 
-#### Server 
+
+#### Server
+
 Run server without watching for changes.
 Gulp: `gulp server`
 
 * Run BrowserSync static server
 
-## Live reload 
+
+## Live reload
+
 This project uses BrowserSync as static server with enabled and configured live reload option.
 
 ## License

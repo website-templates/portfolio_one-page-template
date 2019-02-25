@@ -1,33 +1,33 @@
 mixin head-src()
-	//- ICONS
-	link(rel="shortcut icon", href="favicon.ico")
-	link(rel="shortcut icon", href="static/images/favicons/favicon.png", type="image/x-icon")
-	link(rel="apple-touch-icon", href="static/images/favicons/apple-touch-icon.png")
-	link(rel="apple-touch-icon-precomposed", href="static/images/favicons/apple-touch-icon-precomposed.png")
+  //- ICONS
+  link(rel="shortcut icon", href="favicon.ico")
+  link(rel="shortcut icon", href="static/images/favicons/favicon.png", type="image/x-icon")
+  link(rel="apple-touch-icon", href="static/images/favicons/apple-touch-icon.png")
+  link(rel="apple-touch-icon-precomposed", href="static/images/favicons/apple-touch-icon-precomposed.png")
 
 
-	//- STYLESHEETS
-	//- Google fonts
-	if config.modules.googleFonts
-		link(href= config.modules.googleFonts rel="stylesheet" type="text/css")
+  //- STYLESHEETS
+  //- Google fonts
+  if config.modules.googleFonts
+    link(href= config.modules.googleFonts rel="stylesheet" type="text/css")
 
-	//- Main stylesheet
-	link(rel="stylesheet", href="static/css/screen.min.css")
+  //- Main stylesheet
+  link(rel="stylesheet", href="static/css/screen.min.css")
 
-	//- Custom stylesheet
-	if config.modules.customCss
-		link(rel="stylesheet", href="static/css/custom.min.css")
+  //- Custom stylesheet
+  if config.modules.customCss
+    link(rel="stylesheet", href="static/css/custom.min.css")
 
-	//- Noscript stylesheet
-	if config.modules.noscriptCss
-		noscript
-			link(rel="stylesheet", href="static/css/noscript.min.css")
+  //- Noscript stylesheet
+  if config.modules.noscriptCss
+    noscript
+      link(rel="stylesheet", href="static/css/noscript.min.css")
 
 
-	//- SCRIPTS
-	//- Head javascript
-	if config.modules.headJs
-		script(src="static/js/head.min.js")
+  //- SCRIPTS
+  //- Head javascript
+  if config.modules.headJs
+    script(src="static/js/head.min.js")
 
-	//- Google maps api js disabled by default because of empty API key
-	//- script(src="https://maps.googleapis.com/maps/api/js")
+  //- Google maps api js disabled by default because of empty API key
+  //- script(src="https://maps.googleapis.com/maps/api/js")

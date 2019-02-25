@@ -1,166 +1,182 @@
 // Fixed header that contain first and second navbars
 .main-header
-	position: fixed
-	z-index: 100
-	width: 100%
+  position: fixed
+  z-index: 100
+  width: 100%
 
 // First navbar with languages menu and second nav toggle icon
 .first-nav
-	position: absolute
-	z-index: 200
-	top: 0
-	left: 0
-	height: 40px
-	overflow: hidden
-	background-color: $color-accent
-	+gs()
-	box-shadow: 0 1px 2px -1px $color-dark
+  position: absolute
+  z-index: 200
+  top: 0
+  left: 0
+  height: 40px
+  overflow: hidden
+  background-color: $color-accent
+  +gs()
+  box-shadow: 0 1px 2px -1px $color-dark
 
-	&__languages,
-	&__links
-		+gs-column(9)
-		@media screen and (max-width: 600px)
-			+gs-column(11)
-		& li
-			display: inline-block
-			margin: 0 10px
-			@media screen and (max-width: 800px)
-				margin: 0 7px
-		& a
-			color: $color-light
-			font-family: $font-serif
-			font-style: italic
-			line-height: 40px
-			border-color: $color-light
-			transition: color .5s
+  &__languages,
+  &__links
+    +gs-column(9)
 
-			&.is-selected, &:hover
-				color: $color-dark
-				border: none
+    @media screen and (max-width: 600px)
+      +gs-column(11)
 
-	// Second nav toggle icon
-	&__navcontrol
-		display: none
-		+gs-column(3)
-		color: $color-light
-		line-height: 40px
-		text-align: right
-		border: none
-		transition: color .5s
-		@media screen and (max-width: 600px)
-			+gs-column(1)
-			margin-left: 0
-			font-size: 0
+    & li
+      display: inline-block
+      margin: 0 10px
 
-		&:before
-			display: inline-block
-			margin-right: 10px
-			color: $color-light
-			font-size: 20px
-			transition: color .5s
-			@media screen and (max-width: 600px)
-				margin-right: 0
+      @media screen and (max-width: 800px)
+        margin: 0 7px
 
-		&.is-open,
-		&.is-closed
-			display: block
-		&:hover, &:hover:before
-			color: $color-dark
+    & a
+      color: $color-light
+      font-family: $font-serif
+      font-style: italic
+      line-height: 40px
+      border-color: $color-light
+      transition: color .5s
+
+      &.is-selected, &:hover
+        color: $color-dark
+        border: none
+
+  // Second nav toggle icon
+  &__navcontrol
+    display: none
+    +gs-column(3)
+    color: $color-light
+    line-height: 40px
+    text-align: right
+    border: none
+    transition: color .5s
+
+    @media screen and (max-width: 600px)
+      +gs-column(1)
+      margin-left: 0
+      font-size: 0
+
+    &:before
+      display: inline-block
+      margin-right: 10px
+      color: $color-light
+      font-size: 20px
+      transition: color .5s
+
+      @media screen and (max-width: 600px)
+        margin-right: 0
+
+    &.is-open,
+    &.is-closed
+      display: block
+
+    &:hover, &:hover:before
+      color: $color-dark
 
 // Second nav with anchor links and logo
 .second-nav
-	position: relative
-	min-height: 80px
-	background-color: $color-light
-	+gs()
-	margin-top: 40px
-	box-shadow: 0 1px 2px -1px $color-dark
-	transition: all .5s
+  position: relative
+  min-height: 80px
+  background-color: $color-light
+  +gs()
+  margin-top: 40px
+  box-shadow: 0 1px 2px -1px $color-dark
+  transition: all .5s
 
 
-	&.is-closed
-		margin-top: -40px
-		@media screen and (max-width: 800px)
-			margin-top: -100%
+  &.is-closed
+    margin-top: -40px
 
-	&__logo
-		display: block
-		position: absolute
-		top: 0
-		left: 20px
-		width: 80px
-		color: $color-light
-		font-size: 40px
-		line-height: 80px
-		font-family: $font-sans
-		letter-spacing: -5px
-		font-weight: bold
-		text-align: center
-		background-color: $color-accent
-		border: none
-		@media screen and (max-width: 960px)
-			display: none
-		&:after
-			content: ""
-			position: absolute
-			bottom: -29px
-			left: 0
-			z-index: 250
-			border-top: 30px solid $color-accent
-			border-left: 40px solid transparent
-			border-right: 40px solid transparent
-		& span
-			position: relative
-			display: block
-			width: 100%
-			height: 100%
-			&:after
-				content: ""
-				position: absolute
-				bottom: -15px
-				right: -2px
-				width: 50px
-				height: 5px
-				background-color: transparent
-				box-shadow: 0 1px 2px -1px $color-dark
-				transform: rotate(-37deg)
-			&:before
-				content: ""
-				position: absolute
-				bottom: -15px
-				left: -2px
-				width: 50px
-				height: 5px
-				background-color: transparent
-				box-shadow: 0 1px 2px -1px $color-dark
-				transform: rotate(37deg)
+    @media screen and (max-width: 800px)
+      margin-top: -100%
+
+  &__logo
+    display: block
+    position: absolute
+    top: 0
+    left: 20px
+    width: 80px
+    color: $color-light
+    font-size: 40px
+    line-height: 80px
+    font-family: $font-sans
+    letter-spacing: -5px
+    font-weight: bold
+    text-align: center
+    background-color: $color-accent
+    border: none
+
+    @media screen and (max-width: 960px)
+      display: none
+
+    &:after
+      content: ""
+      position: absolute
+      bottom: -29px
+      left: 0
+      z-index: 250
+      border-top: 30px solid $color-accent
+      border-left: 40px solid transparent
+      border-right: 40px solid transparent
+
+    & span
+      position: relative
+      display: block
+      width: 100%
+      height: 100%
+
+      &:after
+        content: ""
+        position: absolute
+        bottom: -15px
+        right: -2px
+        width: 50px
+        height: 5px
+        background-color: transparent
+        box-shadow: 0 1px 2px -1px $color-dark
+        transform: rotate(-37deg)
+
+      &:before
+        content: ""
+        position: absolute
+        bottom: -15px
+        left: -2px
+        width: 50px
+        height: 5px
+        background-color: transparent
+        box-shadow: 0 1px 2px -1px $color-dark
+        transform: rotate(37deg)
 
 
 // Page menu with anchor links
 .menu
-	+gs-column(12)
-	text-align: right
-	@media screen and (max-width: 800px)
-		text-align: center
+  +gs-column(12)
+  text-align: right
 
-	& li
-		display: inline-block
-		margin-left: 18px
-		@media screen and (max-width: 800px)
-			margin: 0 9px
-			display: block
-			margin: auto
-			border-bottom: 1px dashed $color-darken
+  @media screen and (max-width: 800px)
+    text-align: center
 
-		& a
-			line-height: 80px
-			font-size: 20px
-			transition: color .5s
-			@media screen and (max-width: 800px)
-				font-size: 18px
-				line-height: 2
-				border-bottom: none
+  & li
+    display: inline-block
+    margin-left: 18px
 
-			&.is-selected, &:hover
-				color: $color-darken
-				border: none
+    @media screen and (max-width: 800px)
+      margin: 0 9px
+      display: block
+      margin: auto
+      border-bottom: 1px dashed $color-darken
+
+    & a
+      line-height: 80px
+      font-size: 20px
+      transition: color .5s
+
+      @media screen and (max-width: 800px)
+        font-size: 18px
+        line-height: 2
+        border-bottom: none
+
+      &.is-selected, &:hover
+        color: $color-darken
+        border: none

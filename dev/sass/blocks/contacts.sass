@@ -1,162 +1,166 @@
 // Contact section - contains contact card and map
 .contacts-section
-	position: relative
-	padding-top: 300px
-	@media screen and (max-width: 800px)
-		padding-top: 250px
+  position: relative
+  padding-top: 300px
+
+  @media screen and (max-width: 800px)
+    padding-top: 250px
 
 //Contact card positioned over Google map
 .contact-card
-	position: absolute
-	top: -200px
-	z-index: 50
-	box-shadow: 2px 2px 4px -2px $color-dark
-	+gs-column(9)
-	@media screen and (max-width: 800px)
-		+gs-column(12)
-		float: none
+  position: absolute
+  top: -200px
+  z-index: 50
+  box-shadow: 2px 2px 4px -2px $color-dark
+  +gs-column(9)
 
-	&__header
-		padding: 20px
-		background-color: $color-accent
-		& h2, & h4
-			color: $color-light
+  @media screen and (max-width: 800px)
+    +gs-column(12)
+    float: none
+
+  &__header
+    padding: 20px
+    background-color: $color-accent
+
+    & h2, & h4
+      color: $color-light
 // Contact infomation wrap that contain vcard info, social menu and additional info
 .contact-info
-	position: relative
-	min-height: 300px
-	padding: 20px 60px 20px 20px
-	background-color: $color-light
-	overflow: hidden
-	white-space: nowrap
+  position: relative
+  min-height: 300px
+  padding: 20px 60px 20px 20px
+  background-color: $color-light
+  overflow: hidden
+  white-space: nowrap
 
-	&__logo
-		display: inline-block
-		color: $color-accent
-		font-size: 80px
-		line-height: 60px
-		letter-spacing: -5px
-		font-family: $font-sans
-		font-weight: bold
-		text-align: center
-		border: none
-		vertical-align: top
+  &__logo
+    display: inline-block
+    color: $color-accent
+    font-size: 80px
+    line-height: 60px
+    letter-spacing: -5px
+    font-family: $font-sans
+    font-weight: bold
+    text-align: center
+    border: none
+    vertical-align: top
 
-		@media screen and (max-width: 800px)
-			display: none
+    @media screen and (max-width: 800px)
+      display: none
 
-	&__group
-		display: inline-block
-		padding-left: 20px
-		white-space: normal
-		vertical-align: top
+  &__group
+    display: inline-block
+    padding-left: 20px
+    white-space: normal
+    vertical-align: top
 
-		@media screen and (max-width: 800px)
-			padding-left: 0
-
-
-	&__additional
-		margin-bottom: 20px
-		@media screen and (max-width: 800px)
-			margin-left: 0
-
-		& p
-			font-style: italic
-			font-family: $font-serif
-			line-height: 1.5
-
-	&__vcard
-		@media screen and (max-width: 800px)
-			margin-left: 0
-
-		& h4
-			margin-bottom: 10px
-			font-weight: bold
-
-		& p
-			margin-bottom: 10px
-			&:before
-				float: left
-				display: block
-				width: 25px
-				height: 25px
-				border: none
-				vertical-align: top
-
-		& a
-			display: inline-block
-			vertical-align: top
-
-		& span
-			display: inline-block
+    @media screen and (max-width: 800px)
+      padding-left: 0
 
 
-	&__social
-		position: absolute
-		width: 40px
-		height: 100%
-		top: 0
-		right: 0
-		list-style-type: none
-		background-color: $color-darken
+  &__additional
+    margin-bottom: 20px
+    @media screen and (max-width: 800px)
+      margin-left: 0
 
-		& li
-			display: block
-			width: 40px
-			height: 50px
-			text-align: center
-			overflow: hidden
-			background-color: $color-darken
-			border-top: 1px solid $color-light
+    & p
+      font-style: italic
+      font-family: $font-serif
+      line-height: 1.5
 
-			&:hover
-				background-color: transparent
-			& a
-				display: inline-block
-				width: 40px
-				color: $color-light
-				font-size: 0
-				cursor: default
-				border: none
+  &__vcard
+    @media screen and (max-width: 800px)
+      margin-left: 0
 
-				&:before
-					display: inline-block
-					width: 40px
-					text-align: center
-					font-size: 25px
-					line-height: 50px
-					color: $color-light
-				&:hover:before
-					color: $color-dark
+    & h4
+      margin-bottom: 10px
+      font-weight: bold
+
+    & p
+      margin-bottom: 10px
+      &:before
+        float: left
+        display: block
+        width: 25px
+        height: 25px
+        border: none
+        vertical-align: top
+
+    & a
+      display: inline-block
+      vertical-align: top
+
+    & span
+      display: inline-block
+
+
+  &__social
+    position: absolute
+    width: 40px
+    height: 100%
+    top: 0
+    right: 0
+    list-style-type: none
+    background-color: $color-darken
+
+    & li
+      display: block
+      width: 40px
+      height: 50px
+      text-align: center
+      overflow: hidden
+      background-color: $color-darken
+      border-top: 1px solid $color-light
+
+      &:hover
+        background-color: transparent
+      & a
+        display: inline-block
+        width: 40px
+        color: $color-light
+        font-size: 0
+        cursor: default
+        border: none
+
+        &:before
+          display: inline-block
+          width: 40px
+          text-align: center
+          font-size: 25px
+          line-height: 50px
+          color: $color-light
+        &:hover:before
+          color: $color-dark
 
 // Google map styles
 #gmap
-	position: relative
-	width: 100%
-	height: 600px
-	overflow: hidden
-	background-image: url('../images/map.jpg')
-	background-position: top center
-	background-size: cover
-	&:before
-		content: ""
-		position: absolute
-		top: 0
-		left: 0
-		z-index: 10
-		display: block
-		width: 100%
-		height: 0
-		box-shadow: 0 0 2px 1px $color-dark
+  position: relative
+  width: 100%
+  height: 600px
+  overflow: hidden
+  background-image: url('../images/map.jpg')
+  background-position: top center
+  background-size: cover
 
-	& .gm-style-iw *
-		display: block
-		width: 100% !important
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 10
+    display: block
+    width: 100%
+    height: 0
+    box-shadow: 0 0 2px 1px $color-dark
 
-		& h4, & p
-			margin: 0
-			padding: 0
+  & .gm-style-iw *
+    display: block
+    width: 100% !important
 
-		& a
-			color: #4272db
-			border: none
+    & h4, & p
+      margin: 0
+      padding: 0
+
+    & a
+      color: #4272db
+      border: none
