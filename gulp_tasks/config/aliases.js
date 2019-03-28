@@ -60,4 +60,4 @@ gulp.task('rebuild', function() {
 });
 
 // Run server without watching for changes
-gulp.task('server', function() {'browserSync:server'});
+gulp.task('server', ['browserSync:server']);

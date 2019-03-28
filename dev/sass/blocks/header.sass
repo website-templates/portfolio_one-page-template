@@ -14,7 +14,6 @@
   overflow: hidden
   background-color: $color-accent
   +gs()
-  box-shadow: 0 1px 2px -1px $color-dark
 
   &__languages,
   &__links
@@ -81,20 +80,19 @@
   background-color: $color-light
   +gs()
   margin-top: 40px
-  box-shadow: 0 1px 2px -1px $color-dark
+  box-shadow: inset 0 1px 2px -1px $color-dark, 0 1px 2px -1px $color-dark
+  transform: translateY(0)
   transition: all .5s
 
 
   &.is-closed
-    margin-top: -40px
-
-    @media screen and (max-width: 800px)
-      margin-top: -100%
+    transform: translateY(-100%)
 
   &__logo
     display: block
     position: absolute
     top: 0
+    bottom: 0
     left: 20px
     width: 80px
     color: $color-light
@@ -106,6 +104,7 @@
     text-align: center
     background-color: $color-accent
     border: none
+    box-shadow: inset 0 1px 2px -1px $color-dark
 
     @media screen and (max-width: 960px)
       display: none
@@ -153,9 +152,19 @@
 .menu
   +gs-column(12)
   text-align: right
+  padding-left: 100px
 
-  @media screen and (max-width: 800px)
+  @media screen and (max-width: 960px)
+    padding-left: 0
     text-align: center
+
+  & ul
+    padding-top: 20px
+    padding-bottom: 20px
+
+    @media screen and (max-width: 800px)
+      padding-top: 0
+      padding-bottom: 0
 
   & li
     display: inline-block
@@ -168,13 +177,12 @@
       border-bottom: 1px dashed $color-darken
 
     & a
-      line-height: 80px
+      line-height: 40px
       font-size: 20px
       transition: color .5s
 
       @media screen and (max-width: 800px)
         font-size: 18px
-        line-height: 2
         border-bottom: none
 
       &.is-selected, &:hover
