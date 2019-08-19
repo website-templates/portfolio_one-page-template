@@ -12,7 +12,7 @@
   left: 0
   height: 40px
   overflow: hidden
-  background-color: $color-accent
+  background-color: $color-dark
   +gs()
 
   &__languages,
@@ -30,22 +30,22 @@
         margin: 0 7px
 
     & a
-      color: $color-light
+      color: $color-accent
       font-family: $font-serif
       font-style: italic
       line-height: 40px
-      border-color: $color-light
+      border-color: $color-accent
       transition: color .5s
 
       &.is-selected, &:hover
-        color: $color-dark
+        color: $color-white
         border: none
 
   // Second nav toggle icon
   &__navcontrol
     display: none
     +gs-column(1)
-    color: $color-light
+    color: $color-accent
     line-height: 40px
     text-align: right
     border: none
@@ -59,7 +59,7 @@
     &:before
       display: inline-block
       margin-right: 10px
-      color: $color-light
+      color: $color-accent
       font-size: 20px
       transition: color .5s
 
@@ -71,13 +71,13 @@
       display: block
 
     &:hover, &:hover:before
-      color: $color-dark
+      color: $color-white
 
 // Second nav with anchor links and logo
 .second-nav
   position: relative
   min-height: 80px
-  background-color: $color-light
+  background-color: $color-white
   +gs()
   margin-top: 40px
   box-shadow: inset 0 1px 2px -1px $color-dark, 0 1px 2px -1px $color-dark
@@ -95,14 +95,14 @@
     bottom: 0
     left: 20px
     width: 80px
-    color: $color-light
+    color: $color-white
     font-size: 40px
     line-height: 80px
     font-family: $font-sans
     letter-spacing: -5px
     font-weight: bold
     text-align: center
-    background-color: $color-accent
+    background-color: $color-darken
     border: none
     box-shadow: inset 0 1px 2px -1px $color-dark
 
@@ -115,7 +115,7 @@
       bottom: -29px
       left: 0
       z-index: 250
-      border-top: 30px solid $color-accent
+      border-top: 30px solid $color-dark
       border-left: 40px solid transparent
       border-right: 40px solid transparent
 
