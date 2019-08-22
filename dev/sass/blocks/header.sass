@@ -98,7 +98,7 @@
     color: $color-white
     font-size: 40px
     line-height: 80px
-    font-family: $font-sans
+    font-family: $font-montserrat
     letter-spacing: -5px
     font-weight: bold
     text-align: center
@@ -168,6 +168,7 @@
 
   & li
     display: inline-block
+    font-family: $font-hepta
     margin-left: 18px
 
     @media screen and (max-width: 800px)
@@ -178,11 +179,13 @@
 
     & a
       line-height: 40px
-      font-size: 20px
+      padding-right: 5px
+      font-family: $font-hepta
+      font-size: 16px
       transition: color .5s
 
       @media screen and (max-width: 800px)
-        font-size: 18px
+        font-size: 16px
         border-bottom: none
 
       &.is-selected, &:hover
