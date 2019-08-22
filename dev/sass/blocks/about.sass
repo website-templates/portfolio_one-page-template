@@ -7,7 +7,7 @@
 .about-card
   box-shadow: 2px 2px 4px -2px $color-dark
   +gs-column(9)
-  float: right
+  float: left
 
   @media screen and (max-width: 800px)
     +gs-column(12)
@@ -15,25 +15,34 @@
 
   &__header
     padding: 20px
-    background-color: $color-darken
+    background-color: $color-dark
 
     & h2, & h4
+      font-family: $font-montserrat
       color: $color-white
+
+    & h4  
+      font-style: italic
+      font-weight: 300
 
   &__info
     padding: 20px
-    background-color: $color-light
+    background-color: $color-white
+
     & p
-      font-weight: lighter
+      line-height: 1.5rem
+      font-family: $font-montserrat
+      font-weight: 300
 
     & blockquote p
       margin: 20px 0 20px 20px
-      font-family: $font-serif
+      font-family: $font-montserrat
       font-style: italic
 
     & &-status
       margin-top: 20px
       padding-top: 10px
+      font-family: $font-montserrat
       font-weight: normal
       border-top: 1px dashed $color-darken
 

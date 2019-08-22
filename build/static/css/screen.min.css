@@ -723,10 +723,6 @@ a:hover {
 	width: 100%;
 	height: 100%;
 	min-height: 100%;
-	background-color: transparent;
-	zoom: 1;
-	background-repeat: repeat;
-	background-attachment: fixed;
 }
 
 .home-section__header {
@@ -736,14 +732,16 @@ a:hover {
 }
 
 .home-section__header h1 {
-	margin-bottom: 10px;
-	font-size: 80px;
+	font-size: 60px;
+	font-family: "Hepta Slab", Georgia, Times, "Times New Roman", serif;
 	text-shadow: 1px 1px 1px #0475d8;
 }
 
 .home-section__header h2 {
-	color: #0475d8;
-	font-family: 'Open Sans Condensed';
+	color: #fff;
+	font-size: 30px;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+	font-weight: 300;
 	text-shadow: 1px 1px 2px #0342bf;
 }
 
@@ -765,37 +763,46 @@ a:hover {
 	height: auto;
 	margin-top: 0;
 	margin-bottom: 0;
-	float: right;
+	float: left;
 }
 
 .about-card__header {
 	padding: 20px;
-	background-color: #044bd8;
+	background-color: #0342bf;
 }
 
 .about-card__header h2,
 .about-card__header h4 {
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 	color: #fff;
+}
+
+.about-card__header h4 {
+	font-style: italic;
+	font-weight: 300;
 }
 
 .about-card__info {
 	padding: 20px;
-	background-color: #0475d8;
+	background-color: #fff;
 }
 
 .about-card__info p {
-	font-weight: lighter;
+	line-height: 1.5rem;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+	font-weight: 300;
 }
 
 .about-card__info blockquote p {
 	margin: 20px 0 20px 20px;
-	font-family: "Montserrat", "Raleway", Georgia, Times, "Times New Roman", serif;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 	font-style: italic;
 }
 
 .about-card__info .about-card__info-status {
 	margin-top: 20px;
 	padding-top: 10px;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 	font-weight: normal;
 	border-top: 1px dashed #044bd8;
 }
@@ -1603,7 +1610,7 @@ h4 {
 }
 
 .home-section__header h1 {
-	font-size: 55px;
+	font-size: 35px;
 }
 
 .projects__item {
@@ -1710,7 +1717,11 @@ p {
 }
 
 .home-section__header h1 {
-	font-size: 30px;
+	font-size: 20px;
+}
+
+.home-section__header h2 {
+	font-size: 16px;
 }
 
 .about-card {
