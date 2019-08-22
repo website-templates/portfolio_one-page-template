@@ -20,7 +20,7 @@
     min-width: 100%
     min-height: 100%
     z-index: 0
-    background: transparent url('../images/bg.jpg') center 0 no-repeat
+    background: transparent url('../images/michelle-gradient-crop.jpg') center 0 no-repeat
     background-attachment: fixed
     background-size: cover
 
@@ -30,10 +30,10 @@
     height: 100%
     min-height: 100%
     background-color: transparent
-    background-color: $color-overlay_bg
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000)
+    // background-color: $color-overlay_bg
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000)
     zoom: 1
-    background-image: url($img-overlay_bg)
+    // background-image: url($img-overlay_bg)
     background-repeat: repeat
     background-attachment: fixed
 
@@ -49,16 +49,20 @@
 
     & h1
       margin-bottom: 10px
-      font-size: 100px
-      text-shadow: 1px 1px 1px $color-dark
+      font-size: 80px
+      text-shadow: 1px 1px 1px $color-light
 
       @media screen and (max-width: 1200px)
-        font-size: 75px
+        font-size: 55px
 
       @media screen and (max-width: 800px)
-        font-size: 50px
+        font-size: 30px
 
     & h2
       color: $color-light
-      font-family: "Open Sans",Tahoma,Verdana,Arial,sans-serif
-      text-shadow: 1px 1px 2px $color-dark
+      font-size: 40px
+      font-family: $font-sans
+      text-shadow: 1px 1px 2px $color-darken
+
+      @media screen and (max-width: 800px)
+        font-size: 20px
