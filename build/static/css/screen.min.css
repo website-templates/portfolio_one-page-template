@@ -812,11 +812,37 @@ a:hover {
 	text-transform: uppercase;
 }
 
+.container-main {
+	padding-left: 70px;
+	float: left;
+	color: #002a6d;
+	font-family: "Hepta Slab", Georgia, Times, "Times New Roman", serif;
+}
+
+.grid-container-main {
+	margin-left: 10%;
+}
+
+.common-section__header {
+	margin-left: 100px;
+}
+
+.container-plus {
+	float: right;
+	margin-right: 25%;
+}
+
+.grid-container-plus {
+	float: right;
+}
+
 .services {
 	list-style-type: none;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+	font-weight: 300;
 	float: left;
-	width: 48%;
-	width: calc(50% - 40px);
+	width: 31.33333%;
+	width: calc(33.33333% - 40px);
 	margin-left: 1%;
 	margin-right: 1%;
 	margin-left: calc(20px);
@@ -824,24 +850,31 @@ a:hover {
 	height: auto;
 	margin-top: 0;
 	margin-bottom: 0;
+	margin-left: 30px;
 }
 
-.services__item {
+.services__item-main {
+	background-color: #002a6d;
+	padding: 30px 20px;
+	border-radius: 10px;
 	margin-bottom: 50px;
+	color: #fff;
 }
 
-.services__item h4 {
+.services__item-main h3,
+.services__item-main h4 {
 	margin-left: 80px;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-.services__item p {
-	margin-left: 80px;
+.services__item-main p {
+	margin-left: 10px;
+	font-size: 24px;
 }
 
-.services__item:before {
+.services__item-main:before {
 	margin-top: 30px;
 	float: left;
 	color: #044bd8;
@@ -851,71 +884,8 @@ a:hover {
 	transition: color .5s;
 }
 
-.services__item:hover:before {
+.services__item-main:hover:before {
 	color: #f23b28;
-}
-
-.advantages {
-	text-align: center;
-	border-left: 10px solid #f23b28;
-	border-right: 10px solid #f23b28;
-	float: left;
-	width: 98%;
-	width: calc(100% - 40px);
-	margin-left: 1%;
-	margin-right: 1%;
-	margin-left: calc(20px);
-	margin-right: calc(20px);
-	height: auto;
-	margin-top: 0;
-	margin-bottom: 0;
-	margin-top: 50px;
-}
-
-.advantages h2 {
-	position: relative;
-	margin-top: -15px;
-}
-
-.advantages h2:before,
-.advantages h2:after {
-	content: "";
-	position: absolute;
-	top: 15px;
-	display: block;
-	width: 30%;
-	height: 10px;
-	background-color: #f23b28;
-}
-
-.advantages h2:before {
-	left: 0;
-}
-
-.advantages h2:after {
-	right: 0;
-}
-
-.advantages blockquote {
-	padding: 40px 0;
-	border-bottom: 10px solid #f23b28;
-}
-
-.advantages blockquote p,
-.advantages blockquote cite {
-	display: inline-block;
-	width: 80%;
-	margin: 0 auto;
-}
-
-.advantages blockquote p {
-	margin-bottom: 20px;
-	font-weight: lighter;
-	font-size: 25px;
-}
-
-.advantages blockquote cite {
-	font-size: 30px;
 }
 
 .process {
@@ -1637,19 +1607,6 @@ h4 {
 	text-align: center;
 }
 
-.advantages h2:before,
-.advantages h2:after {
-	width: 25%;
-}
-
-.advantages blockquote p {
-	font-size: 20px;
-}
-
-.advantages blockquote cite {
-	font-size: 25px;
-}
-
 }
 
 @media screen and (max-width: 900px) {
@@ -1738,10 +1695,14 @@ p {
 	float: none;
 }
 
+.grid-container-main {
+	margin-left: 8%;
+}
+
 .services {
 	float: left;
-	width: 98%;
-	width: calc(100% - 40px);
+	width: 48%;
+	width: calc(50% - 40px);
 	margin-left: 1%;
 	margin-right: 1%;
 	margin-left: calc(20px);
@@ -1751,12 +1712,8 @@ p {
 	margin-bottom: 0;
 }
 
-.services__item {
+.services__item-main {
 	margin-bottom: 30px;
-}
-
-.advantages {
-	margin-top: 30px;
 }
 
 .process__step-icon {
@@ -1874,23 +1831,6 @@ p {
 	padding: 100px 0 300px;
 }
 
-.advantages h2:before,
-.advantages h2:after {
-	width: 15%;
-}
-
-.advantages blockquote {
-	padding: 20px 0;
-}
-
-.advantages blockquote p {
-	font-size: 18px;
-}
-
-.advantages blockquote cite {
-	font-size: 20px;
-}
-
 .process__step-icon {
 	width: 140px;
 	height: 140px;
@@ -1928,11 +1868,6 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-
-.advantages h2:before,
-.advantages h2:after {
-	width: 10%;
-}
 
 .process__step-icon {
 	width: 120px;
