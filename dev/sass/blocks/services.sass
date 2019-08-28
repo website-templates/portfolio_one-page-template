@@ -2,9 +2,13 @@
   margin-left: 70px
   float: left
   color: $color-white
+  +gs-column(6)
+
+  @media screen and (max-width: 900px)  
+    +gs-column(12)
 
   @media screen and (max-width: 800px)
-    margin-left: 0%
+    margin-left: 20px
 
 .grid-container-main
   // margin-left: 10%
@@ -29,9 +33,14 @@
 
 .container-plus
   float: right
-  margin-right: 25%
+  // margin-right: 25%
   color: white
   font-family: $font-montserrat
+  +gs-column(6)
+
+  @media screen and (max-width: 900px)  
+    +gs-column(12)
+
 
 
 // Services list
@@ -45,11 +54,11 @@
   margin-top: 0px
   +gs-column(6)
 
-  @media screen and (max-width: 800px)
-    +gs-column(6)
+  // @media screen and (max-width: 800px)
+  //   +gs-column(6)
   
-  @media screen and (max-width: 600px)
-    +gs-column(6)
+  // @media screen and (max-width: 600px)
+  //   +gs-column(6)
 
 
   &__item-main
@@ -74,7 +83,7 @@
     & p
       margin-left: 1rem
       font-weight: bold
-      font-size: 38px
+      font-size: 2.7rem
 
 
     // Service icon with state change on hover
@@ -105,9 +114,21 @@
     position: relative
     left: 2.2rem
     text-shadow: 1.5px 1.5px #9b0c05
+
+    @media screen and (max-width: 1460px)
+      font-size: 2rem
+    
+    @media screen and (max-width: 1200px)
+      font-size: 1.6rem
+
+    @media screen and (max-width: 1100px)    
+      font-size: 1.2rem
+
+    @media screen and (max-width: 900px)    
+      font-size: 2rem
     
     @media screen and (max-width: 600px)
-      font-size: 30px
+      font-size: 1.2rem
       left: 1.2rem
 
 
@@ -130,8 +151,20 @@
     left: 2.2rem
     text-shadow: 1.5px 1.5px #002A58
 
+    @media screen and (max-width: 1460px)
+      font-size: 2rem
+
+    @media screen and (max-width: 1200px)
+      font-size: 1.6rem
+
+    @media screen and (max-width: 1100px)    
+      font-size: 1.2rem
+
+    @media screen and (max-width: 900px)    
+      font-size: 2rem
+
     @media screen and (max-width: 600px)
-      font-size: 30px
+      font-size: 1.2rem
       left: 1.2rem
 
 

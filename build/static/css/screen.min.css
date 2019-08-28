@@ -812,6 +812,16 @@ a:hover {
 	margin-left: 70px;
 	float: left;
 	color: #fff;
+	float: left;
+	width: 48%;
+	width: calc(50% - 40px);
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-left: calc(20px);
+	margin-right: calc(20px);
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .common-section__header {
@@ -830,9 +840,18 @@ a:hover {
 
 .container-plus {
 	float: right;
-	margin-right: 25%;
 	color: white;
 	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+	float: left;
+	width: 48%;
+	width: calc(50% - 40px);
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-left: calc(20px);
+	margin-right: calc(20px);
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .services {
@@ -868,7 +887,7 @@ a:hover {
 .services__item-main p {
 	margin-left: 1rem;
 	font-weight: bold;
-	font-size: 38px;
+	font-size: 2.7rem;
 }
 
 .services__item-main:before {
@@ -1595,6 +1614,18 @@ a:hover {
 
 }
 
+@media screen and (max-width: 1460px) {
+
+.services_first p {
+	font-size: 2rem;
+}
+
+.services_second p {
+	font-size: 2rem;
+}
+
+}
+
 @media screen and (max-width: 1200px) {
 
 h1 {
@@ -1617,6 +1648,14 @@ h4 {
 	font-size: 35px;
 }
 
+.services_first p {
+	font-size: 1.6rem;
+}
+
+.services_second p {
+	font-size: 1.6rem;
+}
+
 .projects__item {
 	float: left;
 	width: 50%;
@@ -1626,6 +1665,18 @@ h4 {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-bottom: 37.5%;
+}
+
+}
+
+@media screen and (max-width: 1100px) {
+
+.services_first p {
+	font-size: 1.2rem;
+}
+
+.services_second p {
+	font-size: 1.2rem;
 }
 
 }
@@ -1644,6 +1695,40 @@ h4 {
 }
 
 @media screen and (max-width: 900px) {
+
+.container-main {
+	float: left;
+	width: 98%;
+	width: calc(100% - 40px);
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-left: calc(20px);
+	margin-right: calc(20px);
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.container-plus {
+	float: left;
+	width: 98%;
+	width: calc(100% - 40px);
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-left: calc(20px);
+	margin-right: calc(20px);
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.services_first p {
+	font-size: 2rem;
+}
+
+.services_second p {
+	font-size: 2rem;
+}
 
 .testimonials__item blockquote cite {
 	font-size: 18px;
@@ -1730,20 +1815,7 @@ p {
 }
 
 .container-main {
-	margin-left: 0%;
-}
-
-.services {
-	float: left;
-	width: 48%;
-	width: calc(50% - 40px);
-	margin-left: 1%;
-	margin-right: 1%;
-	margin-left: calc(20px);
-	margin-right: calc(20px);
-	height: auto;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin-left: 20px;
 }
 
 .services__item-main {
@@ -1866,21 +1938,8 @@ p {
 	padding: 100px 0 300px;
 }
 
-.services {
-	float: left;
-	width: 48%;
-	width: calc(50% - 40px);
-	margin-left: 1%;
-	margin-right: 1%;
-	margin-left: calc(20px);
-	margin-right: calc(20px);
-	height: auto;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
 .services_first p {
-	font-size: 30px;
+	font-size: 1.2rem;
 	left: 1.2rem;
 }
 
@@ -1889,7 +1948,7 @@ p {
 }
 
 .services_second p {
-	font-size: 30px;
+	font-size: 1.2rem;
 	left: 1.2rem;
 }
 
