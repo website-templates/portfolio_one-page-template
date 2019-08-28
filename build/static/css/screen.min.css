@@ -769,10 +769,6 @@ a:hover {
 .about-card__header {
 	padding: 20px;
 	background-color: #0342bf;
-}
-
-.about-card__header h2,
-.about-card__header h4 {
 	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 	color: #fff;
 }
@@ -815,25 +811,28 @@ a:hover {
 .container-main {
 	padding-left: 70px;
 	float: left;
-	color: #002a6d;
-	font-family: "Hepta Slab", Georgia, Times, "Times New Roman", serif;
+	color: #fff;
 }
 
-.grid-container-main {
+.grid-container + .main {
 	margin-left: 10%;
 }
 
 .common-section__header {
 	margin-left: 100px;
+	font-family: "Hepta Slab", Georgia, Times, "Times New Roman", serif;
+	color: #fff;
+}
+
+.common-section__header h3 {
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 }
 
 .container-plus {
 	float: right;
 	margin-right: 25%;
-}
-
-.grid-container-plus {
-	float: right;
+	color: white;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 }
 
 .services {
@@ -854,11 +853,11 @@ a:hover {
 }
 
 .services__item-main {
-	background-color: #002a6d;
+	background-color: #fff;
 	padding: 30px 20px;
 	border-radius: 10px;
 	margin-bottom: 50px;
-	color: #fff;
+	color: #002a6d;
 }
 
 .services__item-main h3,
@@ -886,6 +885,10 @@ a:hover {
 
 .services__item-main:hover:before {
 	color: #f23b28;
+}
+
+.services__item-main__item-plus {
+	color: white;
 }
 
 .process {
@@ -1695,7 +1698,7 @@ p {
 	float: none;
 }
 
-.grid-container-main {
+.grid-container + .main {
 	margin-left: 8%;
 }
 

@@ -1,10 +1,9 @@
 .container-main
   padding-left: 70px
   float: left
-  color: $color-darkest
-  font-family: $font-hepta
+  color: $color-white
 
-.grid-container-main
+.grid-container + .main
   margin-left: 10%
 
   @media screen and (max-width: 800px)
@@ -12,13 +11,22 @@
 
 .common-section__header
   margin-left: 100px
+  font-family: $font-hepta
+  color: $color-white
+
+  & h3  
+    font-family: $font-montserrat
+      
 
 .container-plus
   float: right
   margin-right: 25%
+  color: white
+  font-family: $font-montserrat
 
-.grid-container-plus
-  float: right
+
+// grid-container & .plus
+//   float: right
 
 
 
@@ -36,11 +44,11 @@
 
   &__item-main
     // text-align: center
-    background-color: $color-darkest
+    background-color: $color-white
     padding: 30px 20px
     border-radius: 10px
     margin-bottom: 50px
-    color: $color-white
+    color: $color-darkest
 
     @media screen and (max-width: 800px)
       margin-bottom: 30px
@@ -68,4 +76,4 @@
       color: $color-accent
 
     &__item-plus
-      color:red
+      color: white
