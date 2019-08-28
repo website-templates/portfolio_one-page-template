@@ -3,11 +3,14 @@
   float: left
   color: $color-white
 
+  @media screen and (max-width: 800px)
+    margin-left: 0%
+
 .grid-container-main
   // margin-left: 10%
 
-  @media screen and (max-width: 800px)
-    margin-left: 8%
+  // @media screen and (max-width: 800px)
+  //   margin-left: 2%
 
 .common-section__header
   text-align: center
@@ -42,10 +45,12 @@
   margin-top: 0px
   +gs-column(6)
 
-
-
   @media screen and (max-width: 800px)
     +gs-column(6)
+  
+  @media screen and (max-width: 600px)
+    +gs-column(6)
+
 
   &__item-main
     text-align: center
@@ -58,6 +63,7 @@
 
     @media screen and (max-width: 800px)
       margin-bottom: 30px
+      margin-left: 0px
 
     & h3,h4
       // margin-left: 80px
@@ -90,7 +96,6 @@
     color: white
     background-color: $color-accent
     padding: 2.5rem 9.5rem 2.5rem 0rem
-    // border-top-left-radius: 0
     border-radius: 10px
     border-bottom-left-radius: 50px 40px
     box-shadow: 2px 2px 1px 3px #002A58
@@ -100,10 +105,17 @@
     position: relative
     left: 2.2rem
     text-shadow: 1.5px 1.5px #9b0c05
+    
+    @media screen and (max-width: 600px)
+      font-size: 30px
+      left: 1.2rem
 
 
 .services_second
   margin-left: 1rem
+
+  @media screen and (max-width: 600px)
+    margin-left: 0.5rem
 
   li 
     color: white
@@ -117,6 +129,11 @@
     position: relative
     left: 2.2rem
     text-shadow: 1.5px 1.5px #002A58
+
+    @media screen and (max-width: 600px)
+      font-size: 30px
+      left: 1.2rem
+
 
 
 

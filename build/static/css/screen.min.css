@@ -1729,8 +1729,8 @@ p {
 	float: none;
 }
 
-.grid-container-main {
-	margin-left: 8%;
+.container-main {
+	margin-left: 0%;
 }
 
 .services {
@@ -1748,6 +1748,7 @@ p {
 
 .services__item-main {
 	margin-bottom: 30px;
+	margin-left: 0px;
 }
 
 .process__step-icon {
@@ -1863,6 +1864,33 @@ p {
 
 .home-section__header {
 	padding: 100px 0 300px;
+}
+
+.services {
+	float: left;
+	width: 48%;
+	width: calc(50% - 40px);
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-left: calc(20px);
+	margin-right: calc(20px);
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.services_first p {
+	font-size: 30px;
+	left: 1.2rem;
+}
+
+.services_second {
+	margin-left: 0.5rem;
+}
+
+.services_second p {
+	font-size: 30px;
+	left: 1.2rem;
 }
 
 .process__step-icon {
