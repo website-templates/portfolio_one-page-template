@@ -1,22 +1,28 @@
 .container-main
-  padding-left: 70px
+  margin-left: 70px
   float: left
   color: $color-white
 
-.grid-container + .main
-  margin-left: 10%
+.grid-container-main
+  // margin-left: 10%
 
   @media screen and (max-width: 800px)
     margin-left: 8%
 
 .common-section__header
-  margin-left: 100px
+  text-align: center
+  // margin-left: 100px
   font-family: $font-hepta
   color: $color-white
 
   & h3  
     font-family: $font-montserrat
-      
+  
+  .tech-heading
+    
+  
+  .plus-heading
+    margin-top: 10px
 
 .container-plus
   float: right
@@ -25,55 +31,94 @@
   font-family: $font-montserrat
 
 
-// grid-container & .plus
-//   float: right
-
-
-
 // Services list
 .services
   list-style-type: none
   font-family: $font-montserrat
   font-weight: 300
-  +gs-column(4)
-  margin-left: 30px
+  margin-left: 0px
+  margin-right: 0px
+  margin-bottom: 0px
+  margin-top: 0px
+  +gs-column(6)
+
 
 
   @media screen and (max-width: 800px)
     +gs-column(6)
 
   &__item-main
-    // text-align: center
-    background-color: $color-white
-    padding: 30px 20px
-    border-radius: 10px
-    margin-bottom: 50px
-    color: $color-darkest
+    text-align: center
+    // background-color: $color-white
+    // color: $color-darkest
+    // padding: 2.5rem 9.5rem 3.5rem 0rem
+    // width: 175%
+    // border-radius: 10px
+    // margin: 0px 20px 0px 0px
 
     @media screen and (max-width: 800px)
       margin-bottom: 30px
 
     & h3,h4
-      margin-left: 80px
-      margin-bottom: 10px
+      // margin-left: 80px
+      // margin-bottom: 10px
       text-transform: uppercase
       font-weight: bold
 
     & p
-      margin-left: 10px
-      font-size: 24px
+      margin-left: 1rem
+      font-weight: bold
+      font-size: 38px
 
 
     // Service icon with state change on hover
     &:before
-      margin-top: 30px
+      // margin-top: 30px
       float: left
       color: $color-darken
-      font-size: 60px
-      transition: color .5s
+      // font-size: 60px
+      // transition: color .5s
 
     &:hover:before
       color: $color-accent
 
     &__item-plus
       color: white
+
+.services_first
+  li
+    color: white
+    background-color: $color-accent
+    padding: 2.5rem 9.5rem 2.5rem 0rem
+    // border-top-left-radius: 0
+    border-radius: 10px
+    border-bottom-left-radius: 50px 40px
+    box-shadow: 2px 2px 1px 3px #002A58
+    margin-bottom: 1rem
+  
+  p
+    position: relative
+    left: 2.2rem
+    text-shadow: 1.5px 1.5px #9b0c05
+
+
+.services_second
+  margin-left: 1rem
+
+  li 
+    color: white
+    background-color: $color-dark
+    padding: 2.5rem 9.5rem 2.5rem 0rem
+    border-radius: 10px
+    border-bottom-right-radius: 50px 40px
+    box-shadow: 2px 2px 1px 3px #002A58
+    margin-bottom: 1rem
+  p
+    position: relative
+    left: 2.2rem
+    text-shadow: 1.5px 1.5px #002A58
+
+
+
+  
+  
