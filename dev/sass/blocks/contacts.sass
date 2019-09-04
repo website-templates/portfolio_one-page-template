@@ -20,22 +20,32 @@
 
   &__header
     padding: 20px
-    background-color: $color-accent
+    background-color: $color-darken
 
     & h2, & h4
-      color: $color-light
+      color: $color-lightest
+
+    & h2
+      font-family: $font-hepta
+      letter-spacing: 3px
+      text-transform: uppercase
+      font-size: 300%
+
+    & h4
+      font-family: $font-montserrat
+      font-size: 180%
 // Contact infomation wrap that contain vcard info, social menu and additional info
 .contact-info
   position: relative
   min-height: 300px
   padding: 20px 60px 20px 20px
-  background-color: $color-light
+  background-color: $color-lighten
   overflow: hidden
   white-space: nowrap
 
   &__logo
     display: inline-block
-    color: $color-accent
+    color: $color-white
     font-size: 80px
     line-height: 60px
     letter-spacing: -5px
@@ -53,6 +63,7 @@
     padding-left: 20px
     white-space: normal
     vertical-align: top
+    color: $color-white
 
     @media screen and (max-width: 800px)
       padding-left: 0
@@ -67,6 +78,7 @@
       font-style: italic
       font-family: $font-serif
       line-height: 1.5
+      font-size: 130%
 
   &__vcard
     @media screen and (max-width: 800px)
@@ -75,9 +87,11 @@
     & h4
       margin-bottom: 10px
       font-weight: bold
+      font-family: $font-montserrat
 
     & p
       margin-bottom: 10px
+      font-family: $font-montserrat
       &:before
         float: left
         display: block
@@ -89,6 +103,8 @@
     & a
       display: inline-block
       vertical-align: top
+      font-family: $font-montserrat
+      color: $color-white
 
     & span
       display: inline-block
@@ -118,7 +134,7 @@
       & a
         display: inline-block
         width: 40px
-        color: $color-light
+        color: $color-white
         font-size: 0
         cursor: pointer
         border: none
@@ -129,9 +145,9 @@
           text-align: center
           font-size: 25px
           line-height: 50px
-          color: $color-light
+          color: $color-white
         &:hover:before
-          color: $color-dark
+          color: $color-lighten
 
 // Google map styles
 #gmap

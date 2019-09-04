@@ -1362,26 +1362,38 @@ a:hover {
 
 .contact-card__header {
 	padding: 20px;
-	background-color: #f23b28;
+	background-color: #044bd8;
 }
 
 .contact-card__header h2,
 .contact-card__header h4 {
-	color: #0475d8;
+	color: #aad8f2;
+}
+
+.contact-card__header h2 {
+	font-family: "Hepta Slab", Georgia, Times, "Times New Roman", serif;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	font-size: 300%;
+}
+
+.contact-card__header h4 {
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+	font-size: 180%;
 }
 
 .contact-info {
 	position: relative;
 	min-height: 300px;
 	padding: 20px 60px 20px 20px;
-	background-color: #0475d8;
+	background-color: #3c91dd;
 	overflow: hidden;
 	white-space: nowrap;
 }
 
 .contact-info__logo {
 	display: inline-block;
-	color: #f23b28;
+	color: #fff;
 	font-size: 80px;
 	line-height: 60px;
 	letter-spacing: -5px;
@@ -1397,6 +1409,7 @@ a:hover {
 	padding-left: 20px;
 	white-space: normal;
 	vertical-align: top;
+	color: #fff;
 }
 
 .contact-info__additional {
@@ -1407,15 +1420,18 @@ a:hover {
 	font-style: italic;
 	font-family: "Montserrat", "Raleway", Georgia, Times, "Times New Roman", serif;
 	line-height: 1.5;
+	font-size: 130%;
 }
 
 .contact-info__vcard h4 {
 	margin-bottom: 10px;
 	font-weight: bold;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 }
 
 .contact-info__vcard p {
 	margin-bottom: 10px;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 }
 
 .contact-info__vcard p:before {
@@ -1430,6 +1446,8 @@ a:hover {
 .contact-info__vcard a {
 	display: inline-block;
 	vertical-align: top;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+	color: #fff;
 }
 
 .contact-info__vcard span {
@@ -1463,7 +1481,7 @@ a:hover {
 .contact-info__social li a {
 	display: inline-block;
 	width: 40px;
-	color: #0475d8;
+	color: #fff;
 	font-size: 0;
 	cursor: pointer;
 	border: none;
@@ -1475,11 +1493,11 @@ a:hover {
 	text-align: center;
 	font-size: 25px;
 	line-height: 50px;
-	color: #0475d8;
+	color: #fff;
 }
 
 .contact-info__social li a:hover:before {
-	color: #0342bf;
+	color: #3c91dd;
 }
 
 #gmap {
@@ -1527,8 +1545,9 @@ a:hover {
 	width: 100%;
 	background-color: #f23b28;
 	color: #0475d8;
-	-webkit-box-shadow: 0 -2px 2px -1px #0342bf;
-	box-shadow: 0 -2px 2px -1px #0342bf;
+	height: 55px;
+	-webkit-box-shadow: 0 -2px 2px -1px #a01912;
+	box-shadow: 0 -2px 2px -1px #a01912;
 }
 
 .main-footer:before {
@@ -1543,8 +1562,8 @@ a:hover {
 }
 
 .main-footer a {
-	color: #0475d8;
-	border-color: #0475d8;
+	color: #fff;
+	border-color: #fff;
 	-webkit-transition: color .5s;
 	-o-transition: color .5s;
 	transition: color .5s;
@@ -1606,7 +1625,7 @@ a:hover {
 	display: block;
 	font-size: 60px;
 	line-height: 40px;
-	color: #0475d8;
+	color: #fff;
 	-webkit-transition: color .5s;
 	-o-transition: color .5s;
 	transition: color .5s;
