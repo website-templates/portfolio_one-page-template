@@ -1242,7 +1242,7 @@ a:hover {
 	display: inline-block;
 	width: 90%;
 	font-size: 25px;
-	color: #f23b28;
+	color: #fff;
 	vertical-align: middle;
 	white-space: normal;
 	border-bottom: none;
@@ -1276,7 +1276,7 @@ a:hover {
 	min-height: 180px;
 	margin-bottom: 40px;
 	padding: 40px 20px;
-	background-color: #0475d8;
+	background-color: #044bd8;
 	-webkit-box-shadow: 2px 2px 4px -2px #0342bf;
 	box-shadow: 2px 2px 4px -2px #0342bf;
 }
@@ -1302,6 +1302,7 @@ a:hover {
 }
 
 .testimonials__item blockquote p {
+	color: #fff;
 	position: relative;
 	margin-left: 25px;
 }
@@ -1322,12 +1323,18 @@ a:hover {
 }
 
 .testimonials__item blockquote cite span.name {
-	color: #f23b28;
+	font-family: "Hepta Slab", Georgia, Times, "Times New Roman", serif;
+	color: #aad8f2;
 }
 
 .testimonials__item blockquote cite span.role {
-	color: #044bd8;
+	font-family: "Montserrat", "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+	color: #0475d8;
 	white-space: nowrap;
+}
+
+.icon_ql {
+	line-height: 1.6rem;
 }
 
 .contacts-section {

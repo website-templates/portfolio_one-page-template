@@ -1,0 +1,31 @@
+            img(src="static/images/projects/trivia-war.png" alt="Trivia War - A Multiplayer Trivia Game")
+            figcaption
+              a.icon.icon_link(href="https://immense-spire-76883.herokuapp.com/" target="_blank") Trivia War - A PvP trivia game with Passport, Socket.io, and a full MERN stack. I developed the "live" aspect of the game by tying Socket.io to the server and client-side pages as well as worked on the overall game logic. 
+          figure.projects__item
+            img(src="static/images/projects/cater2me.png" alt="Cater2Me")
+            figcaption
+              a.icon.icon_link(href="https://cater2me-19283.herokuapp.com/" target="_blank") Cater2Me - A service that connects catering vendors with events that users can create. During this project, I built 90% frontend (Handlebars and Bootstrap). Additionally, I built routes for the vendor-side pages.
+          figure.projects__item
+            img(src="static/images/projects/scraper.jpg" alt="Rotten Tomatoes News Scraper")
+            figcaption
+              a.icon.icon_link(href="https://sheltered-harbor-54612.herokuapp.com/" target="_blank") Rotten Tomatoes Scraper - This app uses Axios to scrape Rotten Tomatoes, save it to Mongo and display using React.
+          figure.projects__item
+            img(src="static/images/projects/petmatcher.jpg" alt="PetMatcher")
+            figcaption
+              a.icon.icon_link(href="https://polar-badlands-83970.herokuapp.com/") PetMatcher - Quiz app that matches you with the best pets for your personality. 
+          figure.projects__item
+            img(src="static/images/projects/cinememes.png" alt="CineMemes")
+            figcaption
+              a.icon.icon_link(href="https://yw2242.github.io/GroupProject1/" target="_blank") CineMemes - Team Project using the Reddit and OMDB APIs. I developed the reddit API and overall look.
+          figure.projects__item
+            img(src="static/images/projects/bamazon.png" alt="Storefront-SQL")
+            figcaption
+              a.icon.icon_link(href="https://github.com/mcollums/Storefront-SQL" rel="nofollow" target="_blank") Command Line Storefront using mySQL.
+          figure.projects__item
+            img(src="static/images/projects/giphy-api.jpg" alt="Giphy-API")
+            figcaption
+              a.icon.icon_link(href="https://mcollums.github.io/Giphy-Api/" rel="nofollow" target="_blank") Uses Giphy's API to search for your favorite shows. Gifs will only play if they're clicked on.
+          figure.projects__item
+            img(src="static/images/projects/petmatcher.jpg" alt="PetMatcher")
+            figcaption
+              a.icon.icon_link(href="https://polar-badlands-83970.herokuapp.com/" rel="nofollow" target="_blank") PetMatcher matches your response with available pets! Focusing on routing and file structures.

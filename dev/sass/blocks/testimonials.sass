@@ -11,7 +11,7 @@
     min-height: 180px
     margin-bottom: 40px
     padding: 40px 20px
-    background-color: $color-light
+    background-color: $color-darken
     box-shadow: 2px 2px 4px -2px $color-dark
 
     @media screen and (max-width: 800px)
@@ -45,6 +45,7 @@
         margin-left: 0
 
       & p
+        color: #fff
         position: relative
         margin-left: 25px
 
@@ -54,6 +55,7 @@
           left: -25px
           font-size: 20px
           color: $color-accent
+
 
       & cite
         display: block
@@ -65,8 +67,13 @@
           font-size: 18px
 
         & span.name
-          color: $color-accent
+          font-family: $font-hepta
+          color: $color-lightest
 
         & span.role
-          color: $color-darken
+          font-family: $font-montserrat
+          color: $color-light
           white-space: nowrap
+
+.icon_ql
+  line-height: 1.6rem
