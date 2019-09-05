@@ -1,10 +1,10 @@
 {
   "site": {
     "lang": "en",
-    "title": "Portfolio template",
+    "title": "Michelle Collums",
     "titleDelim": " | ",
-    "description": "Free responsive one page portfolio template",
-    "keywords": "html template, theme, freebie, opensource",
+    "description": "Michelle Collums | Full Stack Developer",
+    "keywords": "full-stack, web developer, full stack, webdev, javascript, mern, jquery, mongoDB, mysql, html, html 5, css, scss, sass, bootstrap, firebase, socket, socket.iogu",
     "url": "https://github.com/website-templates/portfolio_one-page-template"
   },
   "modules": {
