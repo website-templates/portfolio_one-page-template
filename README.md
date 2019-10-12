@@ -118,6 +118,11 @@ Before start you need to have installed _npm_ , as well as _gulp_ globally.
 This boilerplate uses Pug templates with external data configs.
 Main settings can be found in `dev/data/config.json` file. And they're available for usage in templates with `config.key-name`
 
+## Use
+
+You can easily edit the template and make your own responsive portfolio with it.
+
+
 ## Tasks
 
 Here comes groups ofgulp tasks with some explanations
